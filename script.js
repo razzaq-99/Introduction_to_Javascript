@@ -1,3 +1,5 @@
+                                // Basics of JS
+
 // console.log('Hello');
 // console.log('We are Pakistani');
 
@@ -18,19 +20,47 @@
 
 
 
+                                    // variables in JS
+
+// let x
+// x = 1220
+// console.log(x);
+
+// let age = 21;
+// let height = 5.11;
+// let weight = 70;
+
+// console.log(typeof age);
+// console.log(typeof height);
+// console.log(typeof weight);
+// console.log(`you are ${age} years old`);
+// console.log(`your height is ${height} ft`);
+// console.log(`and your weight is ${weight} kg`);
 
 
-let x
-x = 1220
-console.log(x);
+let firstname = 'Abdul';
+let lastname = 'Razzaq';
+let email = 'abdulrazzaq39@gmail.com'
+let hobby = 'coding'
 
-let age = 21;
-let height = 5.11;
-let weight = 70;
+console.log(typeof firstname);
+console.log(`firstname: ${firstname}`);
 
-console.log(typeof age);
-console.log(typeof height);
-console.log(typeof weight);
-console.log(`you are ${age} years old`);
-console.log(`your height is ${height} ft`);
-console.log(`and your weight is ${weight} kg`);
+console.log(typeof lastname);
+console.log(`lastname: ${lastname}`);
+
+console.log(typeof email);
+console.log(`email: ${email}`);
+
+console.log(typeof hobby);
+console.log(`hobby: ${hobby}`);
+
+
+let online = true;
+let isEmpty = false;
+let isStudent = true;
+
+console.log(typeof online);
+console.log(`Is he online ? - ${online}`);
+console.log(`Is it Empty ? - ${isEmpty}`);
+console.log(`Is he enrolled ? - ${isStudent}`);
