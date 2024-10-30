@@ -67,12 +67,42 @@
 
 
 
+// let fullname = 'abdul razzaq';
+// let age = 21;
+// let isStudent = true;
+
+// document.getElementById('p1').textContent = `Your name is ${fullname}`;
+// document.getElementById('p2').textContent = `Your age is ${age}`;
+// document.getElementById('p3').textContent =  `enrolled as student - ${isStudent}`;
 
 
-let fullname = 'abdul razzaq';
-let age = 21;
-let isStudent = true;
 
-document.getElementById('p1').textContent = `Your name is ${fullname}`;
-document.getElementById('p2').textContent = `Your age is ${age}`;
-document.getElementById('p3').textContent =  `enrolled as student - ${isStudent}`;
+
+
+
+
+                                   // Operators in JS
+let students = 60;
+students = students + 1;
+students = students - 1;
+students = students * 2;
+students = students / 2;
+students = students % 2;
+students = students ** 2;
+
+students += 1;
+students -= 1;
+students *= 2;
+students /= 2;
+students %= 2;
+
+students++;
+students--;
+
+console.log(students);
+
+let a = 10 + 12 - 3 * 6 ** 2 / 2;
+let b = 10 + 12 - 3 ** 3 / (2+2);
+
+console.log(a);
+console.log(b);
