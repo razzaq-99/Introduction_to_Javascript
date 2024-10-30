@@ -82,27 +82,45 @@
 
 
                                    // Operators in JS
-let students = 60;
-students = students + 1;
-students = students - 1;
-students = students * 2;
-students = students / 2;
-students = students % 2;
-students = students ** 2;
+// let students = 60;
+// students = students + 1;
+// students = students - 1;
+// students = students * 2;
+// students = students / 2;
+// students = students % 2;
+// students = students ** 2;
 
-students += 1;
-students -= 1;
-students *= 2;
-students /= 2;
-students %= 2;
+// students += 1;
+// students -= 1;
+// students *= 2;
+// students /= 2;
+// students %= 2;
 
-students++;
-students--;
+// students++;
+// students--;
 
-console.log(students);
+// console.log(students);
 
-let a = 10 + 12 - 3 * 6 ** 2 / 2;
-let b = 10 + 12 - 3 ** 3 / (2+2);
+// let a = 10 + 12 - 3 * 6 ** 2 / 2;
+// let b = 10 + 12 - 3 ** 3 / (2+2);
 
-console.log(a);
-console.log(b);
+// console.log(a);
+// console.log(b);
+
+
+
+
+                                  // User input in JS
+let name ;
+username = window.prompt("whats your name")
+
+console.log(`Hello ${name}!`);
+
+
+let username;
+
+document.getElementById('mybutton').onclick = function(){
+    username = document.getElementById('usernameInput').value;
+    console.log(username);
+    document.getElementById('myh1').textContent = `Hello ${username}`;
+}
