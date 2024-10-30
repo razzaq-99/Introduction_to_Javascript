@@ -38,29 +38,41 @@
 // console.log(`and your weight is ${weight} kg`);
 
 
-let firstname = 'Abdul';
-let lastname = 'Razzaq';
-let email = 'abdulrazzaq39@gmail.com'
-let hobby = 'coding'
+// let firstname = 'Abdul';
+// let lastname = 'Razzaq';
+// let email = 'abdulrazzaq39@gmail.com'
+// let hobby = 'coding'
 
-console.log(typeof firstname);
-console.log(`firstname: ${firstname}`);
+// console.log(typeof firstname);
+// console.log(`firstname: ${firstname}`);
 
-console.log(typeof lastname);
-console.log(`lastname: ${lastname}`);
+// console.log(typeof lastname);
+// console.log(`lastname: ${lastname}`);
 
-console.log(typeof email);
-console.log(`email: ${email}`);
+// console.log(typeof email);
+// console.log(`email: ${email}`);
 
-console.log(typeof hobby);
-console.log(`hobby: ${hobby}`);
+// console.log(typeof hobby);
+// console.log(`hobby: ${hobby}`);
 
 
-let online = true;
-let isEmpty = false;
+// let online = true;
+// let isEmpty = false;
+// let isStudent = true;
+
+// console.log(typeof online);
+// console.log(`Is he online ? - ${online}`);
+// console.log(`Is it Empty ? - ${isEmpty}`);
+// console.log(`Is he enrolled ? - ${isStudent}`);
+
+
+
+
+
+let fullname = 'abdul razzaq';
+let age = 21;
 let isStudent = true;
 
-console.log(typeof online);
-console.log(`Is he online ? - ${online}`);
-console.log(`Is it Empty ? - ${isEmpty}`);
-console.log(`Is he enrolled ? - ${isStudent}`);
+document.getElementById('p1').textContent = `Your name is ${fullname}`;
+document.getElementById('p2').textContent = `Your age is ${age}`;
+document.getElementById('p3').textContent =  `enrolled as student - ${isStudent}`;
