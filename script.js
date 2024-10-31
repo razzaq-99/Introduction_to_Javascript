@@ -111,16 +111,66 @@
 
 
                                   // User input in JS
-let name ;
-username = window.prompt("whats your name")
+// let name ;
+// username = window.prompt("whats your name")
 
-console.log(`Hello ${name}!`);
+// console.log(`Hello ${name}!`);
 
 
-let username;
+// let username;
 
-document.getElementById('mybutton').onclick = function(){
-    username = document.getElementById('usernameInput').value;
-    console.log(username);
-    document.getElementById('myh1').textContent = `Hello ${username}`;
-}
+// document.getElementById('mybutton').onclick = function(){
+//     username = document.getElementById('usernameInput').value;
+//     console.log(username);
+//     document.getElementById('myh1').textContent = `Hello ${username}`;
+// }
+
+
+
+
+
+
+                                       // Type Conversion
+let age = window.prompt("How old are you?");
+age = Number(age);
+age = age +1;
+console.log(age,typeof age);
+
+
+let a = "Carrot";
+let b = "Carrot";
+let c = "Carrot";
+
+a = Number(a);
+b = String(b);
+c = Boolean(c);
+
+console.log(a,typeof a);
+console.log(b,typeof b);
+console.log(c,typeof c);
+
+
+
+let x = "0";
+let y = "0";
+let z = "0";
+
+x = Number(x);
+y = String(y);
+z = Boolean(z);
+
+console.log(x,typeof x);
+console.log(y,typeof y);
+console.log(z,typeof z);
+
+let xx;
+let yy;
+let zz;
+
+xx = Number(xx);
+yy = String(yy);
+zz = Boolean(zz);
+
+console.log(xx,typeof xx);
+console.log(yy,typeof yy);
+console.log(zz,typeof zz);
