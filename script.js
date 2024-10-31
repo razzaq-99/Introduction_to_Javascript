@@ -181,9 +181,9 @@
 
 
                                      // const
-const PI = 3.14159;
-let radius;
-let circumference;
+// const PI = 3.14159;
+// let radius;
+// let circumference;
 
 // PI= 490.333  
 
@@ -194,10 +194,40 @@ let circumference;
 // console.log(circumference);
 
 
-document.getElementById('mybutton').onclick = function(){
-    radius = document.getElementById('mytext').value;
-    radius = Number(radius);
-    circumference = 2 * PI * radius;
-    document.getElementById('myh3').textContent = 'Circumference is '+circumference+'cm';
+// document.getElementById('mybutton').onclick = function(){
+//     radius = document.getElementById('mytext').value;
+//     radius = Number(radius);
+//     circumference = 2 * PI * radius;
+//     document.getElementById('myh3').textContent = 'Circumference is '+circumference+'cm';
     
+// }
+
+
+
+
+
+
+
+
+
+                                       // Counter Program
+const decreasebtn = document.getElementById('decrementbutton');
+const resetbtn = document.getElementById('resetbutton');
+const increasebtn = document.getElementById('incrementbutton');
+const countLabel = document.getElementById('countLabel');
+
+let count = 0;
+increasebtn.onclick = function(){
+    count++;
+    countLabel.textContent = count;
+}
+
+decreasebtn.onclick = function(){
+    count--;
+    countLabel.textContent = count;
+}
+
+resetbtn.onclick = function(){
+    count = 0;
+    countLabel.textContent = count;
 }
