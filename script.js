@@ -211,23 +211,49 @@
 
 
                                        // Counter Program
-const decreasebtn = document.getElementById('decrementbutton');
-const resetbtn = document.getElementById('resetbutton');
-const increasebtn = document.getElementById('incrementbutton');
-const countLabel = document.getElementById('countLabel');
+// const decreasebtn = document.getElementById('decrementbutton');
+// const resetbtn = document.getElementById('resetbutton');
+// const increasebtn = document.getElementById('incrementbutton');
+// const countLabel = document.getElementById('countLabel');
 
-let count = 0;
-increasebtn.onclick = function(){
-    count++;
-    countLabel.textContent = count;
-}
+// let count = 0;
+// increasebtn.onclick = function(){
+//     count++;
+//     countLabel.textContent = count;
+// }
 
-decreasebtn.onclick = function(){
-    count--;
-    countLabel.textContent = count;
-}
+// decreasebtn.onclick = function(){
+//     count--;
+//     countLabel.textContent = count;
+// }
 
-resetbtn.onclick = function(){
-    count = 0;
-    countLabel.textContent = count;
-}
+// resetbtn.onclick = function(){
+//     count = 0;
+//     countLabel.textContent = count;
+// }
+
+
+
+
+
+                                  //Math (objects,functions,contants)
+console.log(Math.PI);
+console.log(Math.E);
+console.log(Math.round(4.6));
+console.log(Math.sqrt(144));
+console.log(Math.abs(-144));
+console.log(Math.pow(2,5));
+console.log(Math.min(1,2,3,4,5,6,7,8,9,10));
+console.log(Math.max(1,2,3,4,5,6,7,8,9,10));
+console.log(Math.floor(3.88));
+console.log(Math.ceil(3.88));
+
+let x = 13;
+let y = 5;
+let z;
+
+// z= Math.max(x,y);
+// z = Math.min(x,y);
+// z = Math.pow(x,y);
+z = Math.sqrt(x);
+console.log(z);
