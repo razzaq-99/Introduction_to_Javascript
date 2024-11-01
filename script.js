@@ -348,32 +348,68 @@
 
 
 
-const AgeInput = document.getElementById("ageInput");
-const submitbutton = document.getElementById("mybutton")
-const resultElement = document.getElementById("result");
+// const AgeInput = document.getElementById("ageInput");
+// const submitbutton = document.getElementById("mybutton")
+// const resultElement = document.getElementById("result");
 
-let age;
+// let age;
 
-submitbutton.onclick = function(){
-    age = AgeInput.value;
-    age = Number(age);
-    if(age>=16 && age<=100){
+// submitbutton.onclick = function(){
+//     age = AgeInput.value;
+//     age = Number(age);
+//     if(age>=16 && age<=100){
 
-        resultElement.textContent = `You are old enough to drive`;
+//         resultElement.textContent = `You are old enough to drive`;
 
-    }
-    else if(age>100){
+//     }
+//     else if(age>100){
 
-        resultElement.textContent = `You are too old to drive`;
+//         resultElement.textContent = `You are too old to drive`;
 
-    }
-    else if(age < 0){
+//     }
+//     else if(age < 0){
             
-            resultElement.textContent = "Age can't be negative";
+//             resultElement.textContent = "Age can't be negative";
+//     }
+//     else{
+        
+//         resultElement.textContent = "You must be 16+ to get a license";
+//     }
+    
+// }
+
+
+
+
+
+
+                                   // CheckBox and Radio button
+const mycheckbox = document.getElementById("mycheckbox");
+const radio1 = document.getElementById("radio1");
+const radio2 = document.getElementById("radio2");
+const radio3 = document.getElementById("radio3");
+const mybutton = document.getElementById("mybutton");
+const subresult = document.getElementById("subresult");
+const genresult = document.getElementById("genresult");
+
+mybutton.onclick = function(){
+    if(mycheckbox.checked == true){
+        subresult.textContent = "You are subscribed";
     }
     else{
-        
-        resultElement.textContent = "You must be 16+ to get a license";
+        subresult.textContent = "You are not subscribed";
     }
-    
+
+    if(radio1.checked == true){
+        genresult.textContent = "You are Male";
+    }
+    else if(radio2.checked == true){
+        genresult.textContent = "You are Female";
+    }
+    else if(radio3.checked == true){
+        genresult.textContent = "Common gender";
+    }
+    else{
+        genresult.textContent = "Select your gender";
+    }
 }
