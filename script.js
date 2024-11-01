@@ -384,32 +384,58 @@
 
 
                                    // CheckBox and Radio button
-const mycheckbox = document.getElementById("mycheckbox");
-const radio1 = document.getElementById("radio1");
-const radio2 = document.getElementById("radio2");
-const radio3 = document.getElementById("radio3");
-const mybutton = document.getElementById("mybutton");
-const subresult = document.getElementById("subresult");
-const genresult = document.getElementById("genresult");
+// const mycheckbox = document.getElementById("mycheckbox");
+// const radio1 = document.getElementById("radio1");
+// const radio2 = document.getElementById("radio2");
+// const radio3 = document.getElementById("radio3");
+// const mybutton = document.getElementById("mybutton");
+// const subresult = document.getElementById("subresult");
+// const genresult = document.getElementById("genresult");
 
-mybutton.onclick = function(){
-    if(mycheckbox.checked == true){
-        subresult.textContent = "You are subscribed";
-    }
-    else{
-        subresult.textContent = "You are not subscribed";
-    }
+// mybutton.onclick = function(){
+//     if(mycheckbox.checked == true){
+//         subresult.textContent = "You are subscribed";
+//     }
+//     else{
+//         subresult.textContent = "You are not subscribed";
+//     }
 
-    if(radio1.checked == true){
-        genresult.textContent = "You are Male";
-    }
-    else if(radio2.checked == true){
-        genresult.textContent = "You are Female";
-    }
-    else if(radio3.checked == true){
-        genresult.textContent = "Common gender";
-    }
-    else{
-        genresult.textContent = "Select your gender";
-    }
-}
+//     if(radio1.checked == true){
+//         genresult.textContent = "You are Male";
+//     }
+//     else if(radio2.checked == true){
+//         genresult.textContent = "You are Female";
+//     }
+//     else if(radio3.checked == true){
+//         genresult.textContent = "Common gender";
+//     }
+//     else{
+//         genresult.textContent = "Select your gender";
+//     }
+// }
+
+
+
+
+
+
+
+                                //Ternary Operator
+let age = 21;
+let result = age >= 18 ? "You are eligible to vote" : "You are not eligible to vote";
+console.log(result);
+
+
+let isStudent = true;
+let result1 = isStudent ? "You are a student!" : "You are not a student!";
+console.log(result1);
+
+
+let gender = "female";
+let result2 = gender == "male" ? "You are a male" : "You are a female";
+console.log(result2);
+
+
+let purchaseamount = 110;
+let discount = purchaseamount >= 100 ? 10 : 0;
+console.log(`Your total bill is ${purchaseamount-purchaseamount*(discount/100)}`);
