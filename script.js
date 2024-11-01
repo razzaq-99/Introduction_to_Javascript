@@ -272,23 +272,108 @@
 // console.log(randomNumber);
 
 
-const myButton = document.getElementById('mybutton');
-const Label1 = document.getElementById('label1');
-const Label2 = document.getElementById('label2');
-const Label3 = document.getElementById('label3');
+// const myButton = document.getElementById('mybutton');
+// const Label1 = document.getElementById('label1');
+// const Label2 = document.getElementById('label2');
+// const Label3 = document.getElementById('label3');
 
-const min = 1;
-const max = 10;
+// const min = 1;
+// const max = 10;
 
-let randomNumber1;
-let randomNumber2;
-let randomNumber3;
+// let randomNumber1;
+// let randomNumber2;
+// let randomNumber3;
 
-myButton.onclick = function(){
-    randomNumber1 = Math.floor(Math.random() * (max-min)) + min ;
-    randomNumber2 = Math.floor(Math.random() * (max-min)) + min ;
-    randomNumber3 = Math.floor(Math.random() * (max-min)) + min ;
-    Label1.textContent = randomNumber1;
-    Label2.textContent = randomNumber2;
-    Label3.textContent = randomNumber3;
+// myButton.onclick = function(){
+//     randomNumber1 = Math.floor(Math.random() * (max-min)) + min ;
+//     randomNumber2 = Math.floor(Math.random() * (max-min)) + min ;
+//     randomNumber3 = Math.floor(Math.random() * (max-min)) + min ;
+//     Label1.textContent = randomNumber1;
+//     Label2.textContent = randomNumber2;
+//     Label3.textContent = randomNumber3;
+// }
+
+
+
+
+
+
+
+
+
+
+                                // Conditional Statements 
+// let age = 12;
+
+// if(age>=18){
+//     console.log("You are eligible to vote")
+// }
+// else{
+//     console.log("You are not eligible to vote")
+// }
+
+// let isStudent = true;
+ 
+// if(isStudent ){
+//     console.log("You are a student!")
+// }
+// else{
+//     console.log("You are not a student!")
+// }
+
+
+
+// let age = -9;
+// let islicense = true;
+
+// if(age>=16 && age<=100){
+//     console.log("You are old enough to drive");
+//     if(islicense){
+//         console.log("you have your license");
+//     }
+//     else{
+//         console.log("you do not have your license");
+//     }
+// }
+// else if(age>100){
+//     console.log("You are too old to drive")
+// }
+// else if(age < 0){
+//         console.log("age can't be negative");
+// }
+// else{
+//     console.log("You must be 16+ to get a license");
+// }
+
+
+
+
+const AgeInput = document.getElementById("ageInput");
+const submitbutton = document.getElementById("mybutton")
+const resultElement = document.getElementById("result");
+
+let age;
+
+submitbutton.onclick = function(){
+    age = AgeInput.value;
+    age = Number(age);
+    if(age>=16 && age<=100){
+
+        resultElement.textContent = `You are old enough to drive`;
+
+    }
+    else if(age>100){
+
+        resultElement.textContent = `You are too old to drive`;
+
+    }
+    else if(age < 0){
+            
+            resultElement.textContent = "Age can't be negative";
+    }
+    else{
+        
+        resultElement.textContent = "You must be 16+ to get a license";
+    }
+    
 }
