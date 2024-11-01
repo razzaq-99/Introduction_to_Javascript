@@ -237,23 +237,58 @@
 
 
                                   //Math (objects,functions,contants)
-console.log(Math.PI);
-console.log(Math.E);
-console.log(Math.round(4.6));
-console.log(Math.sqrt(144));
-console.log(Math.abs(-144));
-console.log(Math.pow(2,5));
-console.log(Math.min(1,2,3,4,5,6,7,8,9,10));
-console.log(Math.max(1,2,3,4,5,6,7,8,9,10));
-console.log(Math.floor(3.88));
-console.log(Math.ceil(3.88));
+// console.log(Math.PI);
+// console.log(Math.E);
+// console.log(Math.round(4.6));
+// console.log(Math.sqrt(144));
+// console.log(Math.abs(-144));
+// console.log(Math.pow(2,5));
+// console.log(Math.min(1,2,3,4,5,6,7,8,9,10));
+// console.log(Math.max(1,2,3,4,5,6,7,8,9,10));
+// console.log(Math.floor(3.88));
+// console.log(Math.ceil(3.88));
 
-let x = 13;
-let y = 5;
-let z;
+// let x = 13;
+// let y = 5;
+// let z;
 
 // z= Math.max(x,y);
 // z = Math.min(x,y);
 // z = Math.pow(x,y);
-z = Math.sqrt(x);
-console.log(z);
+// z = Math.sqrt(x);
+// console.log(z);
+
+
+
+
+
+
+
+                                    // Random Number Generator
+
+// let min = 50;
+// let max = 100;
+// let randomNumber = Math.floor(Math.random() * (max-min)) + min ;
+// console.log(randomNumber);
+
+
+const myButton = document.getElementById('mybutton');
+const Label1 = document.getElementById('label1');
+const Label2 = document.getElementById('label2');
+const Label3 = document.getElementById('label3');
+
+const min = 1;
+const max = 10;
+
+let randomNumber1;
+let randomNumber2;
+let randomNumber3;
+
+myButton.onclick = function(){
+    randomNumber1 = Math.floor(Math.random() * (max-min)) + min ;
+    randomNumber2 = Math.floor(Math.random() * (max-min)) + min ;
+    randomNumber3 = Math.floor(Math.random() * (max-min)) + min ;
+    Label1.textContent = randomNumber1;
+    Label2.textContent = randomNumber2;
+    Label3.textContent = randomNumber3;
+}

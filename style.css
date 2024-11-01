@@ -1,4 +1,4 @@
-#countLabel{
+/* #countLabel{
     display: block;
     text-align: center;
     font-size: 8em;
@@ -21,4 +21,22 @@
 
 .button:hover{
     background-color: rgb(233, 95, 74);
+} */
+
+
+
+                        /* Random Number Generator */
+body{
+    text-align: center;
+    font-family: serif;
+}
+
+#mybutton{
+    font-size: 2em;
+    padding: 5px 25px;
+    border-radius: 5px;
+
+}
+.mylabels{
+    font-size: 2em;
 }
