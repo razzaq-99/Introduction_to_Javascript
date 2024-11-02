@@ -552,23 +552,47 @@
 
 
                                   // String Slicing
-let fullname = "Abdul Razzaq"
+// let fullname = "Abdul Razzaq"
 
-let firstname = fullname.slice(0,5);
-console.log(`Your firstname is ${firstname}`);
+// let firstname = fullname.slice(0,5);
+// console.log(`Your firstname is ${firstname}`);
 
-let lastname = fullname.slice(6);
-console.log(`Your lastname is ${lastname}`);
+// let lastname = fullname.slice(6);
+// console.log(`Your lastname is ${lastname}`);
 
-let firstchar = fullname.slice(0,1);
-console.log(firstchar);
+// let firstchar = fullname.slice(0,1);
+// console.log(firstchar);
 
-let lastchar = fullname.slice(-1);
-console.log(lastchar);
+// let lastchar = fullname.slice(-1);
+// console.log(lastchar);
 
 
-let email = "abdulrazzaq39@gmail.com"
+// let email = "abdulrazzaq39@gmail.com"
 
-let username = email.slice(0,email.indexOf("@"));
+// let username = email.slice(0,email.indexOf("@"));
 
+// console.log(`Your username is ${username}`);
+
+
+
+
+
+
+
+
+                                  // Method Chaining
+// No-Method Chaining
+let username = window.prompt("Enter your username");
+username = username.trim();
+let firstletter = username.charAt(0);
+firstletter = firstletter.toUpperCase();
+let otherletter = username.slice(1);
+otherletter = otherletter.toLowerCase();
+username = firstletter + otherletter;
+
+console.log(`Your username is ${username}`);
+
+
+// Method Chaining
+username = username.trim().charAt(0).toUpperCase() + username.slice(1).toLowerCase();
 console.log(`Your username is ${username}`);
