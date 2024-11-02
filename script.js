@@ -447,61 +447,100 @@
 
 
                                  // Switch Statement 
-let day = 7;
+// let day = 7;
 
-switch(day){
-    case 1:
-        console.log("Monday");
-        break;
-    case 2:
-        console.log("Tuesday");
-        break;
-    case 3:
-        console.log("Wednesday");
-        break;
-    case 4:
-        console.log("Thursday");
-        break;
-    case 5:
-        console.log("Friday");
-        break;
-    case 6:
-        console.log("Saturday");
-        break;
-    case 7:
-        console.log("Sunday");
-        break;
-    default:
-        console.log("Invalid day");
+// switch(day){
+//     case 1:
+//         console.log("Monday");
+//         break;
+//     case 2:
+//         console.log("Tuesday");
+//         break;
+//     case 3:
+//         console.log("Wednesday");
+//         break;
+//     case 4:
+//         console.log("Thursday");
+//         break;
+//     case 5:
+//         console.log("Friday");
+//         break;
+//     case 6:
+//         console.log("Saturday");
+//         break;
+//     case 7:
+//         console.log("Sunday");
+//         break;
+//     default:
+//         console.log("Invalid day");
+// }
+
+
+
+// let marks = 83;
+// let grade;
+
+// switch(true){
+//     case marks >= 90:
+//         grade = "A+";
+//         break;
+//     case marks >= 83:
+//         grade = "A";
+//         break;
+//     case marks >= 75:
+//         grade = "B+";
+//         break;
+//     case marks >= 65:
+//         grade = "B";
+//         break;
+//     case marks >= 60:
+//         grade = "C+";
+//         break;
+//     case marks >= 50:
+//         grade = "C";
+//         break;
+//     default:
+//         grade = "F";
+
+// }
+
+// console.log(`Grade is ${grade}`)
+
+
+
+
+
+
+                                  // String Methods
+let username = "  Abdul Razzaq"
+
+console.log(username.charAt(0));
+
+console.log(username.charCodeAt(0));
+
+console.log(username.indexOf("Razzaq"));
+
+console.log(username.lastIndexOf("a"));
+
+console.log(username.indexOf("l"));
+
+console.log(username.replace("Abdul","Ali"));
+
+console.log(username.toUpperCase());
+
+console.log(username.toLowerCase());
+
+
+if(username.includes(" ")){
+    console.log("Username contains space");
+}
+else{
+    console.log("Username does not contain space");
 }
 
+console.log(username.trim());
 
+console.log(username.startsWith("A"));
 
-let marks = 83;
-let grade;
+console.log(username.endsWith("q"));
 
-switch(true){
-    case marks >= 90:
-        grade = "A+";
-        break;
-    case marks >= 83:
-        grade = "A";
-        break;
-    case marks >= 75:
-        grade = "B+";
-        break;
-    case marks >= 65:
-        grade = "B";
-        break;
-    case marks >= 60:
-        grade = "C+";
-        break;
-    case marks >= 50:
-        grade = "C";
-        break;
-    default:
-        grade = "F";
-
-}
-
-console.log(`Grade is ${grade}`)
