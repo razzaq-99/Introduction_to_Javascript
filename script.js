@@ -512,35 +512,63 @@
 
 
                                   // String Methods
-let username = "  Abdul Razzaq"
+// let username = "  Abdul Razzaq"
 
-console.log(username.charAt(0));
+// console.log(username.charAt(0));
 
-console.log(username.charCodeAt(0));
+// console.log(username.charCodeAt(0));
 
-console.log(username.indexOf("Razzaq"));
+// console.log(username.indexOf("Razzaq"));
 
-console.log(username.lastIndexOf("a"));
+// console.log(username.lastIndexOf("a"));
 
-console.log(username.indexOf("l"));
+// console.log(username.indexOf("l"));
 
-console.log(username.replace("Abdul","Ali"));
+// console.log(username.replace("Abdul","Ali"));
 
-console.log(username.toUpperCase());
+// console.log(username.toUpperCase());
 
-console.log(username.toLowerCase());
+// console.log(username.toLowerCase());
 
 
-if(username.includes(" ")){
-    console.log("Username contains space");
-}
-else{
-    console.log("Username does not contain space");
-}
+// if(username.includes(" ")){
+//     console.log("Username contains space");
+// }
+// else{
+//     console.log("Username does not contain space");
+// }
 
-console.log(username.trim());
+// console.log(username.trim());
 
-console.log(username.startsWith("A"));
+// console.log(username.startsWith("A"));
 
-console.log(username.endsWith("q"));
+// console.log(username.endsWith("q"));
 
+
+
+
+
+
+
+
+                                  // String Slicing
+let fullname = "Abdul Razzaq"
+
+let firstname = fullname.slice(0,5);
+console.log(`Your firstname is ${firstname}`);
+
+let lastname = fullname.slice(6);
+console.log(`Your lastname is ${lastname}`);
+
+let firstchar = fullname.slice(0,1);
+console.log(firstchar);
+
+let lastchar = fullname.slice(-1);
+console.log(lastchar);
+
+
+let email = "abdulrazzaq39@gmail.com"
+
+let username = email.slice(0,email.indexOf("@"));
+
+console.log(`Your username is ${username}`);
