@@ -421,21 +421,87 @@
 
 
                                 //Ternary Operator
-let age = 21;
-let result = age >= 18 ? "You are eligible to vote" : "You are not eligible to vote";
-console.log(result);
+// let age = 21;
+// let result = age >= 18 ? "You are eligible to vote" : "You are not eligible to vote";
+// console.log(result);
 
 
-let isStudent = true;
-let result1 = isStudent ? "You are a student!" : "You are not a student!";
-console.log(result1);
+// let isStudent = true;
+// let result1 = isStudent ? "You are a student!" : "You are not a student!";
+// console.log(result1);
 
 
-let gender = "female";
-let result2 = gender == "male" ? "You are a male" : "You are a female";
-console.log(result2);
+// let gender = "female";
+// let result2 = gender == "male" ? "You are a male" : "You are a female";
+// console.log(result2);
 
 
-let purchaseamount = 110;
-let discount = purchaseamount >= 100 ? 10 : 0;
-console.log(`Your total bill is ${purchaseamount-purchaseamount*(discount/100)}`);
+// let purchaseamount = 110;
+// let discount = purchaseamount >= 100 ? 10 : 0;
+// console.log(`Your total bill is ${purchaseamount-purchaseamount*(discount/100)}`);
+
+
+
+
+
+
+
+                                 // Switch Statement 
+let day = 7;
+
+switch(day){
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    case 4:
+        console.log("Thursday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;
+    case 6:
+        console.log("Saturday");
+        break;
+    case 7:
+        console.log("Sunday");
+        break;
+    default:
+        console.log("Invalid day");
+}
+
+
+
+let marks = 83;
+let grade;
+
+switch(true){
+    case marks >= 90:
+        grade = "A+";
+        break;
+    case marks >= 83:
+        grade = "A";
+        break;
+    case marks >= 75:
+        grade = "B+";
+        break;
+    case marks >= 65:
+        grade = "B";
+        break;
+    case marks >= 60:
+        grade = "C+";
+        break;
+    case marks >= 50:
+        grade = "C";
+        break;
+    default:
+        grade = "F";
+
+}
+
+console.log(`Grade is ${grade}`)
