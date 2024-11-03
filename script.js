@@ -656,13 +656,57 @@
 
 // console.log("Pilly!")
 
-for(let i = 0; i<=20; i++){
-    if(i==12){
-        // continue;
-        break;
+// for(let i = 0; i<=20; i++){
+//     if(i==12){
+//         // continue;
+//         break;
 
+//     }
+//     else{
+//         console.log(i);
+//     }
+// }
+
+
+
+
+
+
+
+
+                                 // Number Guessing Game 
+const min = 50;
+const max = 100;
+
+const answer = Math.floor(Math.random() * (max - min + 1)) + min;
+
+let attemps = 0;
+let guesses ;
+let running = true;
+
+while(running){
+    guesses = window.prompt(`Guess a number between ${min} - ${max}`);
+    guesses = Number(guesses);
+
+    if(isNaN(guesses))
+        {
+            window.alert("Please enter a valid number");
+        }
+    else if(guesses < min || guesses > max){
+        console.log("Please enter a valid number")
     }
     else{
-        console.log(i);
+        attemps++;
+        if(guesses < answer ){
+            window.alert("Too low! Try again");
+        }
+        else if(guesses > answer){
+            window.alert("Too high! Try again");
+        }
+        else{
+            window.alert(`Congratulations! You guessed the correct number ${answer} in ${attemps} attempts`);
+            running = false;
+        }
     }
+
 }
