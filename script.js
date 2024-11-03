@@ -582,17 +582,56 @@
 
                                   // Method Chaining
 // No-Method Chaining
-let username = window.prompt("Enter your username");
-username = username.trim();
-let firstletter = username.charAt(0);
-firstletter = firstletter.toUpperCase();
-let otherletter = username.slice(1);
-otherletter = otherletter.toLowerCase();
-username = firstletter + otherletter;
+// let username = window.prompt("Enter your username");
+// username = username.trim();
+// let firstletter = username.charAt(0);
+// firstletter = firstletter.toUpperCase();
+// let otherletter = username.slice(1);
+// otherletter = otherletter.toLowerCase();
+// username = firstletter + otherletter;
 
-console.log(`Your username is ${username}`);
+// console.log(`Your username is ${username}`);
 
 
 // Method Chaining
-username = username.trim().charAt(0).toUpperCase() + username.slice(1).toLowerCase();
-console.log(`Your username is ${username}`);
+// username = username.trim().charAt(0).toUpperCase() + 
+// username.slice(1).toLowerCase();
+// console.log(`Your username is ${username}`);
+
+
+
+
+
+
+
+
+                               // While loop 
+
+// let username = "";
+
+// while(username === "" || username === null){
+    // console.log("you didn't enter your username")
+    // username = prompt("Enter your username");
+// }
+
+// console.log(`Your username is ${username}`);
+
+
+
+
+let loggedIn = false;
+let username;
+let password;
+
+while(!loggedIn){
+    username = window.prompt("Enter your username");
+    password = window.prompt("Enter your password");
+
+    if(username === "abdulrazzaq39" && password === "12345"){
+        loggedIn = true;
+        console.log("Login successful");
+    }
+    else{
+        console.log("Invalid username or password");
+    }
+}
