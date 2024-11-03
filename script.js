@@ -619,19 +619,50 @@
 
 
 
-let loggedIn = false;
-let username;
-let password;
+// let loggedIn = false;
+// let username;
+// let password;
 
-while(!loggedIn){
-    username = window.prompt("Enter your username");
-    password = window.prompt("Enter your password");
+// while(!loggedIn){
+//     username = window.prompt("Enter your username");
+//     password = window.prompt("Enter your password");
 
-    if(username === "abdulrazzaq39" && password === "12345"){
-        loggedIn = true;
-        console.log("Login successful");
+//     if(username === "abdulrazzaq39" && password === "12345"){
+//         loggedIn = true;
+//         console.log("Login successful");
+//     }
+//     else{
+//         console.log("Invalid username or password");
+//     }
+// }
+
+
+
+
+
+
+
+
+                                    // For loop 
+// for(let i = 0; i<=10; i+=2){
+    // console.log(i);
+    // console.log(`Hello ${i}`);
+// }
+
+
+// for(let i =3 ; i>0; i--){
+//     console.log(i);
+// }
+
+// console.log("Pilly!")
+
+for(let i = 0; i<=20; i++){
+    if(i==12){
+        // continue;
+        break;
+
     }
     else{
-        console.log("Invalid username or password");
+        console.log(i);
     }
 }
