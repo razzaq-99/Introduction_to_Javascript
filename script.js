@@ -675,38 +675,105 @@
 
 
                                  // Number Guessing Game 
-const min = 50;
-const max = 100;
+// const min = 50;
+// const max = 100;
 
-const answer = Math.floor(Math.random() * (max - min + 1)) + min;
+// const answer = Math.floor(Math.random() * (max - min + 1)) + min;
 
-let attemps = 0;
-let guesses ;
-let running = true;
+// let attemps = 0;
+// let guesses ;
+// let running = true;
 
-while(running){
-    guesses = window.prompt(`Guess a number between ${min} - ${max}`);
-    guesses = Number(guesses);
+// while(running){
+//     guesses = window.prompt(`Guess a number between ${min} - ${max}`);
+//     guesses = Number(guesses);
 
-    if(isNaN(guesses))
-        {
-            window.alert("Please enter a valid number");
-        }
-    else if(guesses < min || guesses > max){
-        console.log("Please enter a valid number")
-    }
-    else{
-        attemps++;
-        if(guesses < answer ){
-            window.alert("Too low! Try again");
-        }
-        else if(guesses > answer){
-            window.alert("Too high! Try again");
-        }
-        else{
-            window.alert(`Congratulations! You guessed the correct number ${answer} in ${attemps} attempts`);
-            running = false;
-        }
-    }
+//     if(isNaN(guesses))
+//         {
+//             window.alert("Please enter a valid number");
+//         }
+//     else if(guesses < min || guesses > max){
+//         console.log("Please enter a valid number")
+//     }
+//     else{
+//         attemps++;
+//         if(guesses < answer ){
+//             window.alert("Too low! Try again");
+//         }
+//         else if(guesses > answer){
+//             window.alert("Too high! Try again");
+//         }
+//         else{
+//             window.alert(`Congratulations! You guessed the correct number ${answer} in ${attemps} attempts`);
+//             running = false;
+//         }
+//     }
+
+// }
+
+
+
+
+
+
+
+
+                                    // Functions 
+
+function HelloWorld(){
+    console.log("Hello World");
+    console.log("Hello World");
+    console.log("Hello World is runnning...");
+    console.log("Hello World");
 
 }
+
+// HelloWorld();
+// HelloWorld();
+
+function HappyBirthday(username,age){
+    console.log(`Happy Birthday ${username}! You are ${age} years old`);
+    console.log("Happy Birthday");
+    console.log("Happy Birthday is running...");
+}
+
+// HappyBirthday("Abdul Razzaq", 21);
+
+function add(x,y){
+    return x + y;
+}
+function sub(x,y){
+    return x - y;
+}
+function mul(x,y){
+    return x*y;
+}
+function div(x,y){
+    return x/y;
+}
+
+// console.log(div(6,3));
+
+function isEven(number){
+    if(number % 2 ==0){
+        console.log("number is even");
+    }
+    else{
+        console.log("Number is odd");
+    }
+}
+
+// console.log(isEven(9));
+// console.log(isEven(68));
+
+
+function isvalid(email){
+        if(email.includes("@")){
+            console.log(`Valid Email : ${email}`);
+        }
+        else{
+            console.log(`Invalid Email : ${email}`);
+        }
+}
+
+console.log(isvalid("abdulrazzaq39@gmail.com"))
