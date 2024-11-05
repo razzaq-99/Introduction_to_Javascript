@@ -787,24 +787,47 @@
 
                                  // Temperature Conversion Program
 
-const textBox = document.getElementById("textBox");
-const toFahrenheit = document.getElementById("toFahrenheit");
-const toCelsius = document.getElementById("toCelsius");
-const result = document.getElementById("result");
-let temp;
+// const textBox = document.getElementById("textBox");
+// const toFahrenheit = document.getElementById("toFahrenheit");
+// const toCelsius = document.getElementById("toCelsius");
+// const result = document.getElementById("result");
+// let temp;
 
-function Convert(){
-        if(toFahrenheit.checked){
-            temp = Number(textBox.value);
-            temp = temp * 9 / 5 + 32;
-            result.textContent = temp.toFixed(1) + '°F';
-        }
-        else if(toCelsius.checked){
-            temp = Number(textBox.value);
-            temp = (temp-32) * (5/9);
-            result.textContent = temp.toFixed(1) + '°C';
-        }
-        else{
-            result.textContent = "Select a unit!"
-        }
+// function Convert(){
+//         if(toFahrenheit.checked){
+//             temp = Number(textBox.value);
+//             temp = temp * 9 / 5 + 32;
+//             result.textContent = temp.toFixed(1) + '°F';
+//         }
+//         else if(toCelsius.checked){
+//             temp = Number(textBox.value);
+//             temp = (temp-32) * (5/9);
+//             result.textContent = temp.toFixed(1) + '°C';
+//         }
+//         else{
+//             result.textContent = "Select a unit!"
+//         }
+// }
+
+
+
+
+
+                                 // Arrays
+let fruits = ["apple","orange","banana"];
+
+// console.log(fruits[0]);
+// console.log(fruits[1]);
+// console.log(fruits[2]);
+// console.log(fruits[3]);
+
+fruits.push("Grapes"); 
+fruits.pop()
+fruits.shift();
+fruits.unshift("Mango");
+
+for(let i =0; i<fruits.length; i++){
+    console.log(fruits[i]);
 }
+
+
