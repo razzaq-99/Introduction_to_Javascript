@@ -814,20 +814,42 @@
 
 
                                  // Arrays
-let fruits = ["apple","orange","banana"];
+// let fruits = ["apple","orange","banana"];
 
 // console.log(fruits[0]);
 // console.log(fruits[1]);
 // console.log(fruits[2]);
 // console.log(fruits[3]);
 
-fruits.push("Grapes"); 
-fruits.pop()
-fruits.shift();
-fruits.unshift("Mango");
+// fruits.push("Grapes"); 
+// fruits.pop()
+// fruits.shift();
+// fruits.unshift("Mango");
 
-for(let i =0; i<fruits.length; i++){
-    console.log(fruits[i]);
+// for(let i =0; i<fruits.length; i++){
+//     console.log(fruits[i]);
+// }
+
+
+
+
+
+
+                                   // Dice Roller
+function rollDice(){
+    const diceInput = document.getElementById("diceInput").value;
+    const result = document.getElementById("result");
+    const diceImages = document.getElementById("diceImages");
+    const values = [];
+    const images = [];
+
+    for(let i =0; i<diceInput; i++){
+        const value = Math.floor(Math.random() * 6) + 1;
+        values.push(value);
+        images.push(`<img src="dice_images/${value}.png" alt="dice: ${value}">`);
+    }
+
+result.textContent = `dice: ${values.join(", ")}`;
+diceImages.innerHTML = images.join(" ");
+
 }
-
-
