@@ -836,20 +836,65 @@
 
 
                                    // Dice Roller
-function rollDice(){
-    const diceInput = document.getElementById("diceInput").value;
-    const result = document.getElementById("result");
-    const diceImages = document.getElementById("diceImages");
-    const values = [];
-    const images = [];
+// function rollDice(){
+//     const diceInput = document.getElementById("diceInput").value;
+//     const result = document.getElementById("result");
+//     const diceImages = document.getElementById("diceImages");
+//     const values = [];
+//     const images = [];
 
-    for(let i =0; i<diceInput; i++){
-        const value = Math.floor(Math.random() * 6) + 1;
-        values.push(value);
-        images.push(`<img src="dice_images/${value}.png" alt="dice: ${value}">`);
-    }
+//     for(let i =0; i<diceInput; i++){
+//         const value = Math.floor(Math.random() * 6) + 1;
+//         values.push(value);
+//         images.push(`<img src="dice_images/${value}.png" alt="dice: ${value}">`);
+//     }
 
-result.textContent = `dice: ${values.join(", ")}`;
-diceImages.innerHTML = images.join(" ");
+// result.textContent = `dice: ${values.join(", ")}`;
+// diceImages.innerHTML = images.join(" ");
 
+// }
+
+
+
+
+
+
+
+                                    // Random Password Generator
+function generatePassword(length, lowercase, uppercase, numbers, symbols){
+
+        const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+        const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const numberChars = "0123456789";
+        const symbolChars = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
+        let passwords = '';
+        let allowedChars = '';
+
+        allowedChars += lowercase ? lowercaseChars : "";
+        allowedChars += uppercase ? uppercaseChars : "";
+        allowedChars += numbers ? numberChars : "";
+        allowedChars += symbols ? symbolChars : "";
+
+        if(length <= 0){
+            return `(Password lenght must be atleast 1)`
+        }
+        if(allowedChars.length === 0){
+            return `Atleast 1 set of characters required`
+        }
+
+        for(let i = 0; i < length; i++){
+            passwords += allowedChars.charAt(Math.floor(Math.random() * allowedChars.length));
+        }
+
+           return passwords;
 }
+
+const length = 8;
+const lowercase = true;
+const uppercase = true;
+const numbers = true;
+const symbols = true;
+
+const password = generatePassword(length, lowercase, uppercase, numbers, symbols);
+
+console.log(`Generated Password: ${password}`);
