@@ -906,52 +906,93 @@
 
                                     // Foreach and callback
 
-let numbers = [1,2,3,4,5];
+// let numbers = [1,2,3,4,5];
 
-numbers.forEach(square);
+// numbers.forEach(square);
 // numbers.forEach(triple);
 // numbers.forEach(double);
-numbers.forEach(display);
+// numbers.forEach(display);
 
+
+// function display(element) {
+//     console.log(element)
+// }
+
+// function double(element, index, array){
+//     array[index] = element * 2;
+// }
+
+// function triple(element, index, array){
+//     array[index] = element * 3;
+// }
+
+// function square(element, index, array){
+//     array[index] = Math.pow(element, 2);
+// }
+
+
+
+// let fruits = ["apple","BANANA","orange","grapes","seashell"];
+
+
+// fruits.forEach(capitalize);
+// fruits.forEach(lowercasefruits);
+// fruits.forEach(capital);
+// fruits.forEach(display);
+
+// function capital(element, index, array){
+//     array[index] = element.toUpperCase();
+// }
+
+// function lowercasefruits(element, index, array){
+//     array[index] = element.toLowerCase();
+// }
+
+// function capitalize(element, index, array){
+//     array[index] = element.charAt(0).toUpperCase() + element.slice(1).toLowerCase();
+// }
+
+// function display(element) {
+//        console.log(element);
+// }
+
+
+
+
+
+
+
+                                // map method
+
+let numbers = [1,2,3,4,5,6,7];
+
+let printnumbers = numbers.map(square);
+// console.log(printnumbers);
 
 function display(element) {
     console.log(element)
 }
 
-function double(element, index, array){
-    array[index] = element * 2;
+function double(element){
+    return element * 2;
 }
 
-function triple(element, index, array){
-    array[index] = element * 3;
+function triple(element){
+    return element * 3;
 }
 
-function square(element, index, array){
-    array[index] = Math.pow(element, 2);
+function square(element){
+    return element * element;
 }
 
 
+const dates = ["2022-01-01","2024-10-26","2019-04-31","2020-12-25"];
 
-let fruits = ["apple","BANANA","orange","grapes","seashell"];
+let formattedDates = dates.map(dateFormat);
 
+console.log(formattedDates);
 
-fruits.forEach(capitalize);
-// fruits.forEach(lowercasefruits);
-// fruits.forEach(capital);
-fruits.forEach(display);
-
-function capital(element, index, array){
-    array[index] = element.toUpperCase();
-}
-
-function lowercasefruits(element, index, array){
-    array[index] = element.toLowerCase();
-}
-
-function capitalize(element, index, array){
-    array[index] = element.charAt(0).toUpperCase() + element.slice(1).toLowerCase();
-}
-
-function display(element) {
-       console.log(element);
+function dateFormat(element){
+        const parts = element.split("-");
+        return `${parts[2]}-${parts[1]}-${parts[0]}`;
 }
