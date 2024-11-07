@@ -861,40 +861,97 @@
 
 
                                     // Random Password Generator
-function generatePassword(length, lowercase, uppercase, numbers, symbols){
+// function generatePassword(length, lowercase, uppercase, numbers, symbols){
 
-        const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
-        const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        const numberChars = "0123456789";
-        const symbolChars = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
-        let passwords = '';
-        let allowedChars = '';
+//         const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+//         const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//         const numberChars = "0123456789";
+//         const symbolChars = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
+//         let passwords = '';
+//         let allowedChars = '';
 
-        allowedChars += lowercase ? lowercaseChars : "";
-        allowedChars += uppercase ? uppercaseChars : "";
-        allowedChars += numbers ? numberChars : "";
-        allowedChars += symbols ? symbolChars : "";
+//         allowedChars += lowercase ? lowercaseChars : "";
+//         allowedChars += uppercase ? uppercaseChars : "";
+//         allowedChars += numbers ? numberChars : "";
+//         allowedChars += symbols ? symbolChars : "";
 
-        if(length <= 0){
-            return `(Password lenght must be atleast 1)`
-        }
-        if(allowedChars.length === 0){
-            return `Atleast 1 set of characters required`
-        }
+//         if(length <= 0){
+//             return `(Password lenght must be atleast 1)`
+//         }
+//         if(allowedChars.length === 0){
+//             return `Atleast 1 set of characters required`
+//         }
 
-        for(let i = 0; i < length; i++){
-            passwords += allowedChars.charAt(Math.floor(Math.random() * allowedChars.length));
-        }
+//         for(let i = 0; i < length; i++){
+//             passwords += allowedChars.charAt(Math.floor(Math.random() * allowedChars.length));
+//         }
 
-           return passwords;
+//            return passwords;
+// }
+
+// const length = 8;
+// const lowercase = true;
+// const uppercase = true;
+// const numbers = true;
+// const symbols = true;
+
+// const password = generatePassword(length, lowercase, uppercase, numbers, symbols);
+
+// console.log(`Generated Password: ${password}`);
+
+
+
+
+
+
+                                    // Foreach and callback
+
+let numbers = [1,2,3,4,5];
+
+numbers.forEach(square);
+// numbers.forEach(triple);
+// numbers.forEach(double);
+numbers.forEach(display);
+
+
+function display(element) {
+    console.log(element)
 }
 
-const length = 8;
-const lowercase = true;
-const uppercase = true;
-const numbers = true;
-const symbols = true;
+function double(element, index, array){
+    array[index] = element * 2;
+}
 
-const password = generatePassword(length, lowercase, uppercase, numbers, symbols);
+function triple(element, index, array){
+    array[index] = element * 3;
+}
 
-console.log(`Generated Password: ${password}`);
+function square(element, index, array){
+    array[index] = Math.pow(element, 2);
+}
+
+
+
+let fruits = ["apple","BANANA","orange","grapes","seashell"];
+
+
+fruits.forEach(capitalize);
+// fruits.forEach(lowercasefruits);
+// fruits.forEach(capital);
+fruits.forEach(display);
+
+function capital(element, index, array){
+    array[index] = element.toUpperCase();
+}
+
+function lowercasefruits(element, index, array){
+    array[index] = element.toLowerCase();
+}
+
+function capitalize(element, index, array){
+    array[index] = element.charAt(0).toUpperCase() + element.slice(1).toLowerCase();
+}
+
+function display(element) {
+       console.log(element);
+}
