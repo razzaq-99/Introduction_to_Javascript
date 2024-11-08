@@ -1003,36 +1003,77 @@
 
 
                                 // filter method
-let numbers = [1,2,3,4,5,6,7,8,9]
+// let numbers = [1,2,3,4,5,6,7,8,9]
 
-let isEvens = numbers.filter(isEven);
-let isOdds = numbers.filter(isOdd);
+// let isEvens = numbers.filter(isEven);
+// let isOdds = numbers.filter(isOdd);
 
 // console.log(`Odd numbers are ${isOdds}`);
 // console.log(`Even numbers are ${isEvens}`);
 
-function isEven(element){
+// function isEven(element){
+//     return element % 2 === 0;
+// }
+
+// function isOdd(element){
+//     return element % 2 !== 0;
+// }
+
+
+
+// let ages = [21,13,15,33,65,11,18,19,18]
+
+// let isAdults = ages.filter(isAdult);
+// console.log(`Adults: ${isAdults}`);
+
+// let ischildren = ages.filter(ischild);
+// console.log(`Children: ${ischildren}`);
+
+// function isAdult(element){
+//     return element >= 18;
+// }
+
+// function ischild(element){
+//     return element < 18;
+// }
+
+
+
+
+
+
+                                // function expression
+
+setTimeout(function(){
+    console.log("Hello world");
+}, 3000)
+
+
+let numbers = [1,2,3,4,5,6,7,8,9];
+
+const doublenumbers = numbers.map(function(element){
+    return element + element;
+});
+
+// console.log(`Double Numbers: ${doublenumbers}`);
+
+
+
+const isEvens = numbers.filter(function(element){
     return element % 2 === 0;
 }
+);
 
-function isOdd(element){
+console.log(`Even numbers: ${isEvens}`);
+
+const isOdds = numbers.filter(function(element){
     return element % 2 !== 0;
+});
+
+console.log(`Odd numbers: ${isOdds}`);
+
+const hello = function(){
+    console.log("Hello world 2");
 }
 
-
-
-let ages = [21,13,15,33,65,11,18,19,18]
-
-let isAdults = ages.filter(isAdult);
-console.log(`Adults: ${isAdults}`);
-
-let ischildren = ages.filter(ischild);
-console.log(`Children: ${ischildren}`);
-
-function isAdult(element){
-    return element >= 18;
-}
-
-function ischild(element){
-    return element < 18;
-}
+hello();
