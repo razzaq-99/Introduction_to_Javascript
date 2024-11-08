@@ -964,35 +964,75 @@
 
                                 // map method
 
-let numbers = [1,2,3,4,5,6,7];
+// let numbers = [1,2,3,4,5,6,7];
 
-let printnumbers = numbers.map(square);
+// let printnumbers = numbers.map(square);
 // console.log(printnumbers);
 
-function display(element) {
-    console.log(element)
+// function display(element) {
+//     console.log(element)
+// }
+
+// function double(element){
+//     return element * 2;
+// }
+
+// function triple(element){
+//     return element * 3;
+// }
+
+// function square(element){
+//     return element * element;
+// }
+
+
+// const dates = ["2022-01-01","2024-10-26","2019-04-31","2020-12-25"];
+
+// let formattedDates = dates.map(dateFormat);
+
+
+// console.log(formattedDates);
+
+// function dateFormat(element){
+//         const parts = element.split("-");
+//         return `${parts[2]}-${parts[1]}-${parts[0]}`;
+// }
+
+
+
+
+
+                                // filter method
+let numbers = [1,2,3,4,5,6,7,8,9]
+
+let isEvens = numbers.filter(isEven);
+let isOdds = numbers.filter(isOdd);
+
+// console.log(`Odd numbers are ${isOdds}`);
+// console.log(`Even numbers are ${isEvens}`);
+
+function isEven(element){
+    return element % 2 === 0;
 }
 
-function double(element){
-    return element * 2;
-}
-
-function triple(element){
-    return element * 3;
-}
-
-function square(element){
-    return element * element;
+function isOdd(element){
+    return element % 2 !== 0;
 }
 
 
-const dates = ["2022-01-01","2024-10-26","2019-04-31","2020-12-25"];
 
-let formattedDates = dates.map(dateFormat);
+let ages = [21,13,15,33,65,11,18,19,18]
 
-console.log(formattedDates);
+let isAdults = ages.filter(isAdult);
+console.log(`Adults: ${isAdults}`);
 
-function dateFormat(element){
-        const parts = element.split("-");
-        return `${parts[2]}-${parts[1]}-${parts[0]}`;
+let ischildren = ages.filter(ischild);
+console.log(`Children: ${ischildren}`);
+
+function isAdult(element){
+    return element >= 18;
+}
+
+function ischild(element){
+    return element < 18;
 }
