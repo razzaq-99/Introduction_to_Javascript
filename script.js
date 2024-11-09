@@ -1044,36 +1044,68 @@
 
                                 // function expression
 
-setTimeout(function(){
-    console.log("Hello world");
-}, 3000)
+// setTimeout(function(){
+//     console.log("Hello world");
+// }, 3000)
 
 
-let numbers = [1,2,3,4,5,6,7,8,9];
+// let numbers = [1,2,3,4,5,6,7,8,9];
 
-const doublenumbers = numbers.map(function(element){
-    return element + element;
-});
+// const doublenumbers = numbers.map(function(element){
+//     return element + element;
+// });
 
 // console.log(`Double Numbers: ${doublenumbers}`);
 
 
 
-const isEvens = numbers.filter(function(element){
-    return element % 2 === 0;
-}
-);
+// const isEvens = numbers.filter(function(element){
+//     return element % 2 === 0;
+// }
+// );
 
-console.log(`Even numbers: ${isEvens}`);
+// console.log(`Even numbers: ${isEvens}`);
 
-const isOdds = numbers.filter(function(element){
-    return element % 2 !== 0;
-});
+// const isOdds = numbers.filter(function(element){
+//     return element % 2 !== 0;
+// });
 
-console.log(`Odd numbers: ${isOdds}`);
+// console.log(`Odd numbers: ${isOdds}`);
 
-const hello = function(){
-    console.log("Hello world 2");
+// const hello = function(){
+//     console.log("Hello world 2");
+// }
+
+// hello();
+
+
+
+
+
+
+                                    // Arrow function
+                
+const hello = () => {
+    console.log("Hey!");
 }
 
 hello();
+
+const intro = (name,age) =>{
+    console.log(`My name is ${name} and I am ${age} years old.`);
+}
+
+intro("Abdul", 21);
+
+
+setTimeout( () =>console.log("Goodbye!"),3000);
+
+
+
+let numbers = [1,2,3,4,5,6];
+
+// const squares = numbers.map((element) => Math.pow(element, 2));
+const squares = numbers.map((element) => element * element);
+
+
+console.log(`Square of numbers: ${squares}`);
