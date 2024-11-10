@@ -1085,27 +1085,77 @@
 
                                     // Arrow function
                 
-const hello = () => {
-    console.log("Hey!");
-}
+// const hello = () => {
+//     console.log("Hey!");
+// }
 
-hello();
+// hello();
 
-const intro = (name,age) =>{
-    console.log(`My name is ${name} and I am ${age} years old.`);
-}
+// const intro = (name,age) =>{
+//     console.log(`My name is ${name} and I am ${age} years old.`);
+// }
 
-intro("Abdul", 21);
-
-
-setTimeout( () =>console.log("Goodbye!"),3000);
+// intro("Abdul", 21);
 
 
+// setTimeout( () =>console.log("Goodbye!"),3000);
 
-let numbers = [1,2,3,4,5,6];
+
+
+// let numbers = [1,2,3,4,5,6];
 
 // const squares = numbers.map((element) => Math.pow(element, 2));
-const squares = numbers.map((element) => element * element);
+// const squares = numbers.map((element) => element * element);
 
 
-console.log(`Square of numbers: ${squares}`);
+// console.log(`Square of numbers: ${squares}`);
+
+
+
+
+
+
+
+                                // Object as function or Properties
+                    
+const person1 = {
+    firstname : "Abdul",
+    lastname : "Razzaq",
+    age : 21,
+    isStudent : true,
+    sayHello: function(){
+        console.group("Hey! I am Abdul!")
+    },
+    sayBye: function(){
+        console.log("Goodbye!")
+    }
+}
+
+const person2 = {
+    firstname : "Ali",
+    lastname : "Rahman",
+    age : 25,
+    isStudent : false,
+    sayHello: function(){
+        console.group("Hey! I am Ali!")
+    },
+    sayBye: function(){
+        console.log("Goodbye!")
+    }
+}
+
+console.log(person1.firstname);
+console.log(person1.lastname);
+console.log(person1.age);
+console.log(person1.isStudent);
+
+person1.sayHello();
+person1.sayBye();
+
+console.log(person2.firstname);
+console.log(person2.lastname);
+console.log(person2.age);
+console.log(person2.isStudent);
+
+person2.sayHello();
+person2.sayBye();
