@@ -1118,44 +1118,105 @@
 
                                 // Object as function or Properties
                     
-const person1 = {
-    firstname : "Abdul",
-    lastname : "Razzaq",
-    age : 21,
-    isStudent : true,
-    sayHello: function(){
-        console.group("Hey! I am Abdul!")
-    },
-    sayBye: function(){
-        console.log("Goodbye!")
+// const person1 = {
+//     firstname : "Abdul",
+//     lastname : "Razzaq",
+//     age : 21,
+//     isStudent : true,
+//     sayHello: function(){
+//         console.group("Hey! I am Abdul!")
+//     },
+//     sayBye: function(){
+//         console.log("Goodbye!")
+//     }
+// }
+
+// const person2 = {
+//     firstname : "Ali",
+//     lastname : "Rahman",
+//     age : 25,
+//     isStudent : false,
+//     sayHello: function(){
+//         console.group("Hey! I am Ali!")
+//     },
+//     sayBye: function(){
+//         console.log("Goodbye!")
+//     }
+// }
+
+// console.log(person1.firstname);
+// console.log(person1.lastname);
+// console.log(person1.age);
+// console.log(person1.isStudent);
+
+// person1.sayHello();
+// person1.sayBye();
+
+// console.log(person2.firstname);
+// console.log(person2.lastname);
+// console.log(person2.age);
+// console.log(person2.isStudent);
+
+// person2.sayHello();
+// person2.sayBye();
+
+
+
+
+
+
+
+                                // Constructor in JS
+
+function Car(make,model,year,drive){
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.drive = function(){
+        console.log(`you drive ${model} car`);
+    };
+}
+ 
+const car1 = new Car("Toyota","Corolla",2010);
+const car2 = new Car("Honda","Civic",2015);
+
+console.log(car1.make);
+console.log(car1.model);
+console.log(car1.year);
+console.log(car2.make);
+console.log(car2.model);
+console.log(car2.year);
+
+car1.drive();
+ car2.drive();
+
+
+
+class Product {
+    constructor(name, price, quantity) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
     }
+
+    displayProducts(){
+        console.log(`Name: ${this.name}, Price: $${this.price.toFixed(2)}, Quantity: ${this.quantity}`);
+    }
+
+    updateQuantity(newQuantity){
+        this.quantity = newQuantity;
+    }
+
+    totalPrice(){
+        return this.price * this.quantity;
+    }
+
+
+
 }
 
-const person2 = {
-    firstname : "Ali",
-    lastname : "Rahman",
-    age : 25,
-    isStudent : false,
-    sayHello: function(){
-        console.group("Hey! I am Ali!")
-    },
-    sayBye: function(){
-        console.log("Goodbye!")
-    }
-}
+const product1 = new Product("Apple", 7.99, 10.5);
 
-console.log(person1.firstname);
-console.log(person1.lastname);
-console.log(person1.age);
-console.log(person1.isStudent);
-
-person1.sayHello();
-person1.sayBye();
-
-console.log(person2.firstname);
-console.log(person2.lastname);
-console.log(person2.age);
-console.log(person2.isStudent);
-
-person2.sayHello();
-person2.sayBye();
+product1.updateQuantity(15);
+product1.displayProducts();
+console.log(`Total Price: $${product1.totalPrice().toFixed(2)}}}`);
