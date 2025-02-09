@@ -1168,55 +1168,129 @@
 
                                 // Constructor in JS
 
-function Car(make,model,year,drive){
-    this.make = make;
-    this.model = model;
-    this.year = year;
-    this.drive = function(){
-        console.log(`you drive ${model} car`);
-    };
-}
+// function Car(make,model,year,drive){
+//     this.make = make;
+//     this.model = model;
+//     this.year = year;
+//     this.drive = function(){
+//         console.log(`you drive ${model} car`);
+//     };
+// }
  
-const car1 = new Car("Toyota","Corolla",2010);
-const car2 = new Car("Honda","Civic",2015);
+// const car1 = new Car("Toyota","Corolla",2010);
+// const car2 = new Car("Honda","Civic",2015);
 
-console.log(car1.make);
-console.log(car1.model);
-console.log(car1.year);
-console.log(car2.make);
-console.log(car2.model);
-console.log(car2.year);
+// console.log(car1.make);
+// console.log(car1.model);
+// console.log(car1.year);
+// console.log(car2.make);
+// console.log(car2.model);
+// console.log(car2.year);
 
-car1.drive();
- car2.drive();
-
-
-
-class Product {
-    constructor(name, price, quantity) {
-        this.name = name;
-        this.price = price;
-        this.quantity = quantity;
-    }
-
-    displayProducts(){
-        console.log(`Name: ${this.name}, Price: $${this.price.toFixed(2)}, Quantity: ${this.quantity}`);
-    }
-
-    updateQuantity(newQuantity){
-        this.quantity = newQuantity;
-    }
-
-    totalPrice(){
-        return this.price * this.quantity;
-    }
+// car1.drive();
+//  car2.drive();
 
 
 
-}
+// class Product {
+//     constructor(name, price, quantity) {
+//         this.name = name;
+//         this.price = price;
+//         this.quantity = quantity;
+//     }
 
-const product1 = new Product("Apple", 7.99, 10.5);
+//     displayProducts(){
+//         console.log(`Name: ${this.name}, Price: $${this.price.toFixed(2)}, Quantity: ${this.quantity}`);
+//     }
 
-product1.updateQuantity(15);
-product1.displayProducts();
-console.log(`Total Price: $${product1.totalPrice().toFixed(2)}}}`);
+//     updateQuantity(newQuantity){
+//         this.quantity = newQuantity;
+//     }
+
+//     totalPrice(){
+//         return this.price * this.quantity;
+//     }
+
+
+
+// }
+
+// const product1 = new Product("Apple", 7.99, 10.5);
+
+// product1.updateQuantity(15);
+// product1.displayProducts();
+// console.log(`Total Price: $${product1.totalPrice().toFixed(2)}}}`);
+
+
+
+
+
+                                // Nested Objects
+
+// const Person = {
+//     name: "John",
+//     age : 20,
+//     isStudent: true,
+//     hobbies: ["reading", "swimming", "coding"],
+//     address: {
+//         street: "123 Main St",
+//         city: "New York",
+//         state: "NY",
+//         zip: "10001"
+//     }
+
+// }
+
+// console.log(Person.name);
+
+// console.log(Person.age);
+// console.log(Person.isStudent);
+
+// console.log(Person.hobbies[0]);
+// console.log(Person.hobbies[1]);
+
+// console.log(Person.address.street);
+// console.log(Person.address.city);
+// console.log(Person.address.state);
+
+
+
+const fruits = [{name:"Apple",color:"red",calories:95},
+                {name:"Banana",color:"yellow",calories:91},
+                {name:"Orange",color:"orange",calories:94},
+                {name:"Mango",color:"yellow",calories:97},
+                {name:"Dates",color:"dark-brown",calories:99}
+];
+
+console.log(fruits[0].name);
+console.log(fruits[0].color);
+console.log(fruits[0].calories);
+
+fruits.pop();
+console.log(fruits);
+
+fruits.unshift({name:"Pineapple",color:"green",calories:101});
+
+console.log(fruits[0].name);
+console.log(fruits[0].color);
+console.log(fruits[0].calories);
+
+fruits.forEach((fruit) => console.log(`${fruit.name} has ${fruit.calories} calories`));
+
+const filteredFruits = fruits.filter((fruit) => fruit.color === "yellow");
+
+console.log(filteredFruits);
+
+const lowCalfruits = fruits.filter((fruit) => fruit.calories < 95);
+
+console.log(lowCalfruits);
+
+const maxFruits = fruits.reduce((max,fruit) => 
+    fruit.calories > max.calories ? fruit : max)
+
+const minFruits = fruits.reduce((min,fruit) => 
+    fruit.calories < min.calories ? fruit : min)
+
+console.log(maxFruits);
+
+console.log(minFruits);
