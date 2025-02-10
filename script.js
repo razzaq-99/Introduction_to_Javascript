@@ -1255,42 +1255,80 @@
 
 
 
-const fruits = [{name:"Apple",color:"red",calories:95},
-                {name:"Banana",color:"yellow",calories:91},
-                {name:"Orange",color:"orange",calories:94},
-                {name:"Mango",color:"yellow",calories:97},
-                {name:"Dates",color:"dark-brown",calories:99}
-];
+// const fruits = [{name:"Apple",color:"red",calories:95},
+//                 {name:"Banana",color:"yellow",calories:91},
+//                 {name:"Orange",color:"orange",calories:94},
+//                 {name:"Mango",color:"yellow",calories:97},
+//                 {name:"Dates",color:"dark-brown",calories:99}
+// ];
 
-console.log(fruits[0].name);
-console.log(fruits[0].color);
-console.log(fruits[0].calories);
+// console.log(fruits[0].name);
+// console.log(fruits[0].color);
+// console.log(fruits[0].calories);
 
-fruits.pop();
-console.log(fruits);
+// fruits.pop();
+// console.log(fruits);
 
-fruits.unshift({name:"Pineapple",color:"green",calories:101});
+// fruits.unshift({name:"Pineapple",color:"green",calories:101});
 
-console.log(fruits[0].name);
-console.log(fruits[0].color);
-console.log(fruits[0].calories);
+// console.log(fruits[0].name);
+// console.log(fruits[0].color);
+// console.log(fruits[0].calories);
 
-fruits.forEach((fruit) => console.log(`${fruit.name} has ${fruit.calories} calories`));
+// fruits.forEach((fruit) => console.log(`${fruit.name} has ${fruit.calories} calories`));
 
-const filteredFruits = fruits.filter((fruit) => fruit.color === "yellow");
+// const filteredFruits = fruits.filter((fruit) => fruit.color === "yellow");
 
-console.log(filteredFruits);
+// console.log(filteredFruits);
 
-const lowCalfruits = fruits.filter((fruit) => fruit.calories < 95);
+// const lowCalfruits = fruits.filter((fruit) => fruit.calories < 95);
 
-console.log(lowCalfruits);
+// console.log(lowCalfruits);
 
-const maxFruits = fruits.reduce((max,fruit) => 
-    fruit.calories > max.calories ? fruit : max)
+// const maxFruits = fruits.reduce((max,fruit) => 
+//     fruit.calories > max.calories ? fruit : max)
 
-const minFruits = fruits.reduce((min,fruit) => 
-    fruit.calories < min.calories ? fruit : min)
+// const minFruits = fruits.reduce((min,fruit) => 
+//     fruit.calories < min.calories ? fruit : min)
 
-console.log(maxFruits);
+// console.log(maxFruits);
 
-console.log(minFruits);
+// console.log(minFruits);
+
+
+
+
+                             // Sort method
+
+// let fruits = ["Apple","Banana","Orange","Mango","Pineapple","Peach"]
+let numbers = [1,10,2,6,3,4,9,7,8];
+
+// fruits.sort();
+// numbers.sort();
+// numbers.sort((a,b) => a - b);
+numbers.sort((a,b) => b-a);
+
+// console.log(fruits);
+console.log(numbers);
+
+
+let people = [{
+    name:"John",
+    age:30
+},
+{
+    name:"Jane",
+    age:25
+},
+{
+    name:"Bob",
+    age:35
+},
+{
+    name:"Alice",
+    age:20
+}]
+
+people.sort((a,b) => a.age - b.age);
+
+console.log(people);
