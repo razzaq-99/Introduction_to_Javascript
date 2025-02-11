@@ -1301,34 +1301,82 @@
                              // Sort method
 
 // let fruits = ["Apple","Banana","Orange","Mango","Pineapple","Peach"]
-let numbers = [1,10,2,6,3,4,9,7,8];
+// let numbers = [1,10,2,6,3,4,9,7,8];
 
 // fruits.sort();
 // numbers.sort();
 // numbers.sort((a,b) => a - b);
-numbers.sort((a,b) => b-a);
+// numbers.sort((a,b) => b-a);
 
 // console.log(fruits);
-console.log(numbers);
+// console.log(numbers);
 
 
-let people = [{
-    name:"John",
-    age:30
-},
-{
-    name:"Jane",
-    age:25
-},
-{
-    name:"Bob",
-    age:35
-},
-{
-    name:"Alice",
-    age:20
-}]
+// let people = [{
+//     name:"John",
+//     age:30
+// },
+// {
+//     name:"Jane",
+//     age:25
+// },
+// {
+//     name:"Bob",
+//     age:35
+// },
+// {
+//     name:"Alice",
+//     age:20
+// }]
 
-people.sort((a,b) => a.age - b.age);
+// people.sort((a,b) => a.age - b.age);
 
-console.log(people);
+// console.log(people);
+
+
+
+
+                                // Closure
+function outer () {
+    let count = 0;
+    function inner () {
+        count++;
+        console.log(count);
+    }
+    inner();
+    inner();
+    return inner();
+}
+
+outer();
+
+// const counter = count;
+
+// console.log(counter); 
+
+
+function createGame (){
+    let score = 0;
+    
+        function increaseScore(points){
+            score += points;
+            console.log(`${points}pts`);
+        }
+
+        function decreaseScore(points){
+            score -= points;
+            console.log(`${points}pts`);
+        }
+        function getScore(){
+            console.log(`Your current Score is : ${score}pts`);
+        }
+
+        return {increaseScore,decreaseScore,getScore}
+    }
+
+    const game = createGame();
+    game.increaseScore(18);
+    game.decreaseScore(5);
+    game.getScore();
+    
+
