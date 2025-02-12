@@ -1337,46 +1337,65 @@
 
 
                                 // Closure
-function outer () {
-    let count = 0;
-    function inner () {
-        count++;
-        console.log(count);
-    }
-    inner();
-    inner();
-    return inner();
+// function outer () {
+//     let count = 0;
+//     function inner () {
+//         count++;
+//         console.log(count);
+//     }
+//     inner();
+//     inner();
+//     return inner();
+// }
+
+// outer();
+
+// // const counter = count;
+
+// // console.log(counter); 
+
+
+// function createGame (){
+//     let score = 0;
+    
+//         function increaseScore(points){
+//             score += points;
+//             console.log(`${points}pts`);
+//         }
+
+//         function decreaseScore(points){
+//             score -= points;
+//             console.log(`${points}pts`);
+//         }
+//         function getScore(){
+//             console.log(`Your current Score is : ${score}pts`);
+//         }
+
+//         return {increaseScore,decreaseScore,getScore}
+//     }
+
+//     const game = createGame();
+//     game.increaseScore(18);
+//     game.decreaseScore(5);
+//     game.getScore();
+    
+
+
+
+
+
+                                  // Digital Clock
+function updateClock(){
+    const now = new Date();
+    let hours = now.getHours();
+    const meridiem = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12 || 12;
+    hours = hours.toString().padStart(2,0);
+    const minutes = now.getMinutes().toString().padStart(2,0);
+    const seconds = now.getSeconds().toString().padStart(2,0);
+    const TimeString = `${hours}:${minutes}:${seconds} ${meridiem}`;
+    document.getElementById('clock').innerText = TimeString;
 }
 
-outer();
-
-// const counter = count;
-
-// console.log(counter); 
-
-
-function createGame (){
-    let score = 0;
-    
-        function increaseScore(points){
-            score += points;
-            console.log(`${points}pts`);
-        }
-
-        function decreaseScore(points){
-            score -= points;
-            console.log(`${points}pts`);
-        }
-        function getScore(){
-            console.log(`Your current Score is : ${score}pts`);
-        }
-
-        return {increaseScore,decreaseScore,getScore}
-    }
-
-    const game = createGame();
-    game.increaseScore(18);
-    game.decreaseScore(5);
-    game.getScore();
-    
-
+updateClock();
+setInterval(updateClock,1000);
